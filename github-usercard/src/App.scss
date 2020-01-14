@@ -9,13 +9,11 @@ html {
 }
 
 .App {
-  border: 2px solid black;
   width: 100%;
 }
 
 //header
 .header {
-  border: 2px solid black;
   width: 100%;
   height: 10vh;
   padding: 0 30px;
@@ -24,15 +22,61 @@ html {
   align-items: center;
 
   .title {
-    border: 2px solid blue;
     width: 20%;
+    height: 60%;
     font-size: 3rem;
+  }
+
+  form {
+    height: 60%;
+
+    .ind-field {
+      background: #2b2d2f;
+      height: 50px;
+      border-radius: 50px;
+
+      &:hover > input {
+        width: 240px;
+        padding: 0 20px;
+      }
+    }
+
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      line-height: 50px;
+      color: white;
+      transition: 0.4s;
+      float: left;
+      width: 0px;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: none;
+      float: right;
+      background: #2b2d2f;
+      color: white;
+      transition: 0.4s;
+      cursor: pointer;
+      font-size: 2.5rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
 
 //Main-content
 .main-container {
-  border: 2px solid black;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -45,7 +89,6 @@ html {
   width: 20%;
 
   .user-card {
-    border: 2px solid blue;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -88,7 +131,6 @@ html {
 
 //followers
 .followers-container {
-  border: 2px solid blue;
   width: 75%;
   display: flex;
   flex-direction: column;

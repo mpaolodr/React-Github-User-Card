@@ -37,7 +37,7 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.newUser !== this.state.newUser) {
       console.log("state has changed");
-      fetch(`https://api.github.com/users/${this.state.searchQuery}`)
+      fetch(`https://api.github.com/users/${this.state.newUser}`)
         //convert to json
         .then(initialRes => initialRes.json())
         .then(res => {

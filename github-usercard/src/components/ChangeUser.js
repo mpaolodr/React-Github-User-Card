@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 class ChangeUser extends React.Component {
   constructor() {
@@ -34,7 +36,9 @@ class ChangeUser extends React.Component {
             value={this.state.newUser}
             onChange={this.handleChange}
           />
-          <button>Submit</button>
+          <button>
+            <FontAwesomeIcon icon={faUsers} />
+          </button>
         </div>
       </form>
     );
