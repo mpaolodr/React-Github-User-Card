@@ -2,6 +2,7 @@ import React from "react";
 
 // COMPONENTS
 import User from "./components/User";
+import Followers from "./components/Followers";
 
 //STYLES
 import "./App.scss";
@@ -10,7 +11,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      user: ""
+      user: "",
+      userFollowers: []
     };
   }
 
@@ -19,7 +21,14 @@ class App extends React.Component {
     fetch("https://api.github.com/users/mpaolodr")
       //convert to json
       .then(initialRes => initialRes.json())
-      .then(res => this.setState({ user: res }))
+      .then(res => {
+        this.setState({ user: res });
+        //fetch user's followers
+        fetch(res.followers_url)
+          .then(initialRes => initialRes.json())
+          .then(res => this.setState({ userFollowers: res }))
+          .catch(err => console.log(err));
+      })
       .catch(err => console.log(err));
   }
 
@@ -31,6 +40,7 @@ class App extends React.Component {
         </div>
         <div className="main-container">
           <User user={this.state.user} />
+          <Followers userFollowers={this.state.userFollowers} />
         </div>
       </div>
     );
