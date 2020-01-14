@@ -1,5 +1,8 @@
 import React from "react";
 
+// COMPONENTS
+import User from "./components/User";
+
 //STYLES
 import "./App.scss";
 
@@ -14,7 +17,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2>Component Here</h2>
+        <div className="header">
+          <h2 className="title">GitHub User Card</h2>
+        </div>
+        <div className="main-container">
+          <User />
+        </div>
       </div>
     );
   }
