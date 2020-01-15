@@ -10,6 +10,7 @@ html {
 
 .App {
   width: 100%;
+  background: #41b3a3;
 }
 
 //header
@@ -25,19 +26,23 @@ html {
     width: 20%;
     height: 60%;
     font-size: 3rem;
+    color: #fff;
   }
 
   form {
     height: 60%;
 
     .ind-field {
-      background: #2b2d2f;
+      background: #85dcb8;
       height: 50px;
       border-radius: 50px;
 
       &:hover > input {
         width: 240px;
         padding: 0 20px;
+      }
+      &:hover > button {
+        color: #85dcb8;
       }
     }
 
@@ -62,8 +67,8 @@ html {
       border-radius: 50px;
       border: none;
       float: right;
-      background: #2b2d2f;
-      color: white;
+      background: white;
+      color: #e27d60;
       transition: 0.4s;
       cursor: pointer;
       font-size: 2.5rem;
@@ -85,7 +90,8 @@ html {
 }
 
 .user-container {
-  border: 2px solid black;
+  border: 5px solid #e27d60;
+  border-radius: 10px;
   width: 20%;
 
   .user-card {
@@ -119,11 +125,7 @@ html {
 
       h3 {
         font-size: 1.8rem;
-      }
-
-      span {
-        color: navy;
-        font-size: 1.8rem;
+        color: white;
       }
     }
   }
@@ -138,7 +140,7 @@ html {
   align-items: center;
 
   .follower-card {
-    border: 2px solid blue;
+    border: 5px solid #e27d60;
     width: 80%;
     height: 200px;
     border-radius: 200px;
@@ -171,11 +173,7 @@ html {
 
       h3 {
         font-size: 1.8rem;
-      }
-
-      span {
-        color: navy;
-        font-size: 1.8rem;
+        color: white;
       }
     }
   }
